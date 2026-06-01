@@ -18,10 +18,10 @@ exports.handler = async (event) => {
         max_tokens: 1000,
         messages: [{
           role: 'user',
-          content: `Analiza estas coordenadas GPS y detecta paradas de más de 3 minutos. Devuelve SOLO JSON sin texto adicional:
-{"paradas":[{"inicio":"fecha","fin":"fecha","lat":0.0,"lon":0.0,"duracion_minutos":0}]}
+          content: `Analiza estas coordenadas GPS y detecta paradas de más de 3 minutos. Responde ÚNICAMENTE con el JSON puro, sin bloques de código markdown, sin backticks, sin texto adicional antes o después.
+Formato exacto requerido:{"paradas":[{"inicio":"fecha","fin":"fecha","lat":0.0,"lon":0.0,"duracion_minutos":0}]}
 
-Coordenadas: ${coordinates}`
+          Coordenadas: ${coordinates}`
         }]
       })
     })
